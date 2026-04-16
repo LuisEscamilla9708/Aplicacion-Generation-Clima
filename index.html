@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aplicación del Clima Asistida por IA</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+
+    <section class="hero">
+
+      <h1>Aplicación del Clima Asistida por IA</h1>
+      <p class="subtitle">
+        Esta aplicación recibe la entrada del usuario, realiza una solicitud HTTP a Open-Meteo y muestra los datos meteorológicos en
+        un formato amigable. Además, incluye manejo de errores, soporte para múltiples ciudades y pruebas rápidas.
+      </p>
+
+    </section>
+
+    <section class="panel controls">
+      <label for="cityInput">Ciudad o ciudades</label>
+      <div class="input-row">
+        <input
+          id="cityInput"
+          type="text"
+          placeholder="Ejemplo: Tokio, Ciudad de México, Madrid"
+          autocomplete="off"
+        />
+        <button id="fetchBtn" type="button">Obtener clima</button>
+      </div>
+      <p class="help-text">
+        Puedes consultar una ciudad o varias separadas por coma. Ejemplo: <strong>Tokio, Madrid, Bogotá</strong>.
+      </p>
+    </section>
+
+    <section class="panel status-panel" aria-live="polite">
+      <div id="statusMessage" class="status info">Ingresa una ciudad para comenzar.</div>
+    </section>
+
+    <section class="panel results-panel">
+      <div class="results-header">
+        <div>
+          <h2>Resultados del clima</h2>
+          <p class="section-copy">La app muestra temperatura, velocidad del viento, humedad y una descripción breve del clima.</p>
+        </div>
+        <button id="testBtn" type="button" class="secondary-btn">Ejecutar pruebas rápidas</button>
+      </div>
+      <div id="results" class="results-grid"></div>
+    </section>
+
+    <section class="feature-grid">
+      <article class="panel small-panel">
+        <h2>Qué incluye esta aplicación</h2>
+        <ul class="bullet-list">
+          <li>Llamada API funcional para obtener datos meteorológicos reales.</li>
+          <li>Manejo de errores para ciudad inválida, campo vacío o fallas de red.</li>
+          <li>Funcionalidad avanzada: consulta del clima para múltiples ciudades.</li>
+          <li>Interfaz limpia con tarjetas para mostrar la información.</li>
+          <li>Pruebas rápidas integradas para validar funciones clave.</li>
+        </ul>
+      </article>
+
+
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>
+      Datos meteorológicos por
+      <a href="https://open-meteo.com/" target="_blank" rel="noreferrer">Open-Meteo.com</a>
+      · Proyecto con HTML, CSS y JavaScript.
+    </p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
